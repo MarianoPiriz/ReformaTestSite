@@ -72,7 +72,8 @@ ul {
   border: 0;
   cursor: pointer;
   user-select: none;
-  z-index: 100;
+  position: absolute;
+  top:5%;
 }
 
 #logoInicio {
