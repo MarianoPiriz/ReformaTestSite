@@ -1,0 +1,275 @@
+/* FONTS */
+@font-face {
+  font-family: "Bebas";
+  src: url(../fuentes/BEBAS.TTF);
+}
+
+@font-face {
+  font-family: "AlegreS";
+  src: url(../fuentes/AlegreS.ttf);
+}
+
+@font-face {
+  font-family: "Franchise";
+  src: url(../fuentes/Franchise.ttf);
+}
+
+@font-face {
+  font-family: ARL;
+  src: url(../fuentes/ARL.TTF);
+}
+
+@font-face {
+  font-family: GroteskBold;
+  src: url(../fuentes/GroteskBold.ttf);
+}
+
+@font-face {
+  font-family: Grotesk;
+  src: url(../fuentes/Grotesk.ttf);
+}
+
+/* BODY */
+
+html {
+  box-sizing: border-box;
+  background-color: #f89007;
+  padding: 0;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  padding: 0.5em;
+  font-family: ARL;
+}
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* HEADER */
+
+.header-wrapper {
+  width: 100%;
+}
+
+.btn-menu {
+  margin: 2%;
+  display: inline;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  z-index: 100;
+}
+
+#logoInicio {
+  width: 17vw;
+  margin-top: 4vh;
+  margin-left: 50%;
+  animation-name: spinlogo;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+}
+
+#logoInicio a {
+  display: block;
+}
+
+@keyframes spinlogo {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+#mainNav {
+  width: 100%;
+  height: 28vh;
+  background-color: black;
+  display: none;
+  margin-top: 3%;
+  padding-top: 4%;
+  transform: translateY(-200%);
+  transition: transform ease-in-out 500ms;
+}
+
+#mainNav ul {
+  display: inline-block;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+#mainNav a {
+  display: block;
+  font-family: "GroteskBold";
+  font-size: 5vw;
+  padding-bottom: 4px;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.separador1 {
+  width: 100%;
+  height: 0.15vh;
+  background-color: black;
+}
+
+/* MAIN */
+.maincontent {
+  width: 90%;
+  margin-left: 5%;
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease-in;
+}
+
+#maintitle {
+  font-family: "AlegreS";
+  text-align: center;
+  font-size: 35vw;
+  font-weight: lighter;
+  line-height: 17vh;
+  margin: 0;
+  z-index: -10;
+}
+
+.separador2 {
+  width: 100%;
+  height: 0.15vh;
+  background-color: black;
+}
+
+#subtitle {
+  font-family: "GroteskBold";
+  font-size: 5vw;
+  margin-left: 3%;
+}
+.bars {
+  color: white;
+}
+
+.imgwrapper {
+  overflow: hidden;
+}
+#initimg {
+  max-width: 80%;
+  padding-left: 20%;
+}
+
+.quienSon {
+  padding-bottom: 120px;
+}
+.quienSon h3 {
+  font-family: "ARL";
+  border-bottom: 1px solid black;
+}
+.quienSon p {
+  font-family: "Grotesk";
+}
+
+#footerContainer {
+  background-image: url(../img/TopBottomLoader2.png);
+  background-size: cover;
+  background-color: #f89007;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* padding-top: 3%;
+  padding-bottom: 3%; */
+  background-repeat: no-repeat;
+}
+.footer-nav {
+  box-sizing: border-box;
+  padding: 1%;
+  width: 80%;
+  border: 1px black solid;
+  background-color: #f89007;
+  text-align: center;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.social-links {
+  width: 9vw;
+}
+
+.derechos {
+  padding: 0;
+  margin: 0;
+  font-family: "Grotesk";
+  font-size: 3vw;
+}
+
+@media (min-width: 568px) {
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .social-links {
+    width: 4vw;
+  }
+  .derechos {
+    font-size: 1.7vw;
+  }
+  #subtitle {
+    margin-top: 10%;
+  }
+
+  #mainNav {
+    height: 50vh;
+  }
+  #logoInicio {
+    margin-left: 70%;
+  }
+  #initimg {
+    max-width: 70%;
+  }
+  #mainNav a {
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .social-links {
+    width: 2vw;
+  }
+  .derechos {
+    font-size: 1vw;
+  }
+
+  #footerContainer {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    justify-content: center;
+  }
+  .footer-nav {
+    padding: 1% 20%;
+  }
+  #logoInicio {
+    margin-left: 80%;
+  }
+  #mainNav {
+    height: 50vh;
+  }
+}
